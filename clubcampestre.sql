@@ -25,15 +25,15 @@ DROP TABLE IF EXISTS `w324p_booking`;
 CREATE TABLE `w324p_booking` (
   `booking_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `trash` bigint(10) NOT NULL DEFAULT '0',
-  `sync_gid` varchar(200) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
+  `sync_gid` varchar(200) COLLATE utf8_general_ci NOT NULL DEFAULT '',
   `is_new` bigint(10) NOT NULL DEFAULT '1',
-  `status` varchar(200) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
+  `status` varchar(200) COLLATE utf8_general_ci NOT NULL DEFAULT '',
   `sort_date` datetime DEFAULT NULL,
   `modification_date` datetime DEFAULT NULL,
-  `form` text COLLATE utf8mb4_unicode_520_ci,
+  `form` text COLLATE utf8_general_ci,
   `booking_type` bigint(10) NOT NULL DEFAULT '1',
   PRIMARY KEY (`booking_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -58,7 +58,7 @@ CREATE TABLE `w324p_bookingdates` (
   `booking_date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `approved` bigint(20) unsigned NOT NULL DEFAULT '0',
   UNIQUE KEY `booking_id_dates` (`booking_id`,`booking_date`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -81,12 +81,12 @@ DROP TABLE IF EXISTS `w324p_commentmeta`;
 CREATE TABLE `w324p_commentmeta` (
   `meta_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `comment_id` bigint(20) unsigned NOT NULL DEFAULT '0',
-  `meta_key` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `meta_value` longtext COLLATE utf8mb4_unicode_ci,
+  `meta_key` varchar(255) COLLATE utf8_general_ci DEFAULT NULL,
+  `meta_value` longtext COLLATE utf8_general_ci,
   PRIMARY KEY (`meta_id`),
   KEY `comment_id` (`comment_id`),
   KEY `meta_key` (`meta_key`(191))
-) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -108,17 +108,17 @@ DROP TABLE IF EXISTS `w324p_comments`;
 CREATE TABLE `w324p_comments` (
   `comment_ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `comment_post_ID` bigint(20) unsigned NOT NULL DEFAULT '0',
-  `comment_author` tinytext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `comment_author_email` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `comment_author_url` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `comment_author_IP` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `comment_author` tinytext COLLATE utf8_general_ci NOT NULL,
+  `comment_author_email` varchar(100) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `comment_author_url` varchar(200) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `comment_author_IP` varchar(100) COLLATE utf8_general_ci NOT NULL DEFAULT '',
   `comment_date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `comment_date_gmt` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `comment_content` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `comment_content` text COLLATE utf8_general_ci NOT NULL,
   `comment_karma` int(11) NOT NULL DEFAULT '0',
-  `comment_approved` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '1',
-  `comment_agent` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `comment_type` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `comment_approved` varchar(20) COLLATE utf8_general_ci NOT NULL DEFAULT '1',
+  `comment_agent` varchar(255) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `comment_type` varchar(20) COLLATE utf8_general_ci NOT NULL DEFAULT '',
   `comment_parent` bigint(20) unsigned NOT NULL DEFAULT '0',
   `user_id` bigint(20) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`comment_ID`),
@@ -127,7 +127,7 @@ CREATE TABLE `w324p_comments` (
   KEY `comment_date_gmt` (`comment_date_gmt`),
   KEY `comment_parent` (`comment_parent`),
   KEY `comment_author_email` (`comment_author_email`(10))
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -148,21 +148,21 @@ DROP TABLE IF EXISTS `w324p_frm_fields`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `w324p_frm_fields` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `field_key` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `name` text COLLATE utf8mb4_unicode_ci,
-  `description` longtext COLLATE utf8mb4_unicode_ci,
-  `type` text COLLATE utf8mb4_unicode_ci,
-  `default_value` longtext COLLATE utf8mb4_unicode_ci,
-  `options` longtext COLLATE utf8mb4_unicode_ci,
+  `field_key` varchar(100) COLLATE utf8_general_ci DEFAULT NULL,
+  `name` text COLLATE utf8_general_ci,
+  `description` longtext COLLATE utf8_general_ci,
+  `type` text COLLATE utf8_general_ci,
+  `default_value` longtext COLLATE utf8_general_ci,
+  `options` longtext COLLATE utf8_general_ci,
   `field_order` int(11) DEFAULT '0',
   `required` int(1) DEFAULT NULL,
-  `field_options` longtext COLLATE utf8mb4_unicode_ci,
+  `field_options` longtext COLLATE utf8_general_ci,
   `form_id` int(11) DEFAULT NULL,
   `created_at` datetime NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `field_key` (`field_key`),
   KEY `form_id` (`form_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=66 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=66 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -184,20 +184,20 @@ DROP TABLE IF EXISTS `w324p_frm_forms`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `w324p_frm_forms` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `form_key` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `description` text COLLATE utf8mb4_unicode_ci,
+  `form_key` varchar(100) COLLATE utf8_general_ci DEFAULT NULL,
+  `name` varchar(255) COLLATE utf8_general_ci DEFAULT NULL,
+  `description` text COLLATE utf8_general_ci,
   `parent_form_id` int(11) DEFAULT '0',
   `logged_in` tinyint(1) DEFAULT NULL,
   `editable` tinyint(1) DEFAULT NULL,
   `is_template` tinyint(1) DEFAULT '0',
   `default_template` tinyint(1) DEFAULT '0',
-  `status` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `options` longtext COLLATE utf8mb4_unicode_ci,
+  `status` varchar(255) COLLATE utf8_general_ci DEFAULT NULL,
+  `options` longtext COLLATE utf8_general_ci,
   `created_at` datetime NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `form_key` (`form_key`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -219,14 +219,14 @@ DROP TABLE IF EXISTS `w324p_frm_item_metas`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `w324p_frm_item_metas` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `meta_value` longtext COLLATE utf8mb4_unicode_ci,
+  `meta_value` longtext COLLATE utf8_general_ci,
   `field_id` bigint(20) NOT NULL,
   `item_id` bigint(20) NOT NULL,
   `created_at` datetime NOT NULL,
   PRIMARY KEY (`id`),
   KEY `field_id` (`field_id`),
   KEY `item_id` (`item_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -247,10 +247,10 @@ DROP TABLE IF EXISTS `w324p_frm_items`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `w324p_frm_items` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `item_key` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `description` text COLLATE utf8mb4_unicode_ci,
-  `ip` text COLLATE utf8mb4_unicode_ci,
+  `item_key` varchar(100) COLLATE utf8_general_ci DEFAULT NULL,
+  `name` varchar(255) COLLATE utf8_general_ci DEFAULT NULL,
+  `description` text COLLATE utf8_general_ci,
+  `ip` text COLLATE utf8_general_ci,
   `form_id` bigint(20) DEFAULT NULL,
   `post_id` bigint(20) DEFAULT NULL,
   `user_id` bigint(20) DEFAULT NULL,
@@ -265,7 +265,7 @@ CREATE TABLE `w324p_frm_items` (
   KEY `post_id` (`post_id`),
   KEY `user_id` (`user_id`),
   KEY `parent_item_id` (`parent_item_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -351,21 +351,21 @@ DROP TABLE IF EXISTS `w324p_links`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `w324p_links` (
   `link_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `link_url` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `link_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `link_image` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `link_target` varchar(25) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `link_description` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `link_visible` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'Y',
+  `link_url` varchar(255) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `link_name` varchar(255) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `link_image` varchar(255) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `link_target` varchar(25) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `link_description` varchar(255) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `link_visible` varchar(20) COLLATE utf8_general_ci NOT NULL DEFAULT 'Y',
   `link_owner` bigint(20) unsigned NOT NULL DEFAULT '1',
   `link_rating` int(11) NOT NULL DEFAULT '0',
   `link_updated` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `link_rel` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `link_notes` mediumtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `link_rss` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `link_rel` varchar(255) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `link_notes` mediumtext COLLATE utf8_general_ci NOT NULL,
+  `link_rss` varchar(255) COLLATE utf8_general_ci NOT NULL DEFAULT '',
   PRIMARY KEY (`link_id`),
   KEY `link_visible` (`link_visible`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -386,11 +386,11 @@ DROP TABLE IF EXISTS `w324p_masterslider_options`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `w324p_masterslider_options` (
   `ID` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `option_name` varchar(120) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `option_value` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `option_name` varchar(120) COLLATE utf8_general_ci NOT NULL,
+  `option_value` text COLLATE utf8_general_ci NOT NULL,
   PRIMARY KEY (`ID`),
   UNIQUE KEY `option_name` (`option_name`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -412,20 +412,20 @@ DROP TABLE IF EXISTS `w324p_masterslider_sliders`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `w324p_masterslider_sliders` (
   `ID` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
-  `title` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `alias` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `type` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `title` varchar(100) COLLATE utf8_general_ci NOT NULL,
+  `alias` varchar(100) COLLATE utf8_general_ci NOT NULL,
+  `type` varchar(64) COLLATE utf8_general_ci NOT NULL,
   `slides_num` smallint(5) unsigned NOT NULL,
   `date_created` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `date_modified` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `params` mediumtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `custom_styles` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `custom_fonts` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `status` varchar(10) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'draft',
+  `params` mediumtext COLLATE utf8_general_ci NOT NULL,
+  `custom_styles` text COLLATE utf8_general_ci NOT NULL,
+  `custom_fonts` text COLLATE utf8_general_ci NOT NULL,
+  `status` varchar(10) COLLATE utf8_general_ci NOT NULL DEFAULT 'draft',
   PRIMARY KEY (`ID`),
   KEY `date_created` (`date_created`),
   KEY `alias` (`alias`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -446,12 +446,12 @@ DROP TABLE IF EXISTS `w324p_options`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `w324p_options` (
   `option_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `option_name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `option_value` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `autoload` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'yes',
+  `option_name` varchar(191) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `option_value` longtext COLLATE utf8_general_ci NOT NULL,
+  `autoload` varchar(20) COLLATE utf8_general_ci NOT NULL DEFAULT 'yes',
   PRIMARY KEY (`option_id`),
   UNIQUE KEY `option_name` (`option_name`)
-) ENGINE=InnoDB AUTO_INCREMENT=714 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=714 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -474,12 +474,12 @@ DROP TABLE IF EXISTS `w324p_postmeta`;
 CREATE TABLE `w324p_postmeta` (
   `meta_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `post_id` bigint(20) unsigned NOT NULL DEFAULT '0',
-  `meta_key` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `meta_value` longtext COLLATE utf8mb4_unicode_ci,
+  `meta_key` varchar(255) COLLATE utf8_general_ci DEFAULT NULL,
+  `meta_value` longtext COLLATE utf8_general_ci,
   PRIMARY KEY (`meta_id`),
   KEY `post_id` (`post_id`),
   KEY `meta_key` (`meta_key`(191))
-) ENGINE=InnoDB AUTO_INCREMENT=1093 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=1093 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -504,31 +504,31 @@ CREATE TABLE `w324p_posts` (
   `post_author` bigint(20) unsigned NOT NULL DEFAULT '0',
   `post_date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `post_date_gmt` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `post_content` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `post_title` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `post_excerpt` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `post_status` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'publish',
-  `comment_status` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'open',
-  `ping_status` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'open',
-  `post_password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `post_name` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `to_ping` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `pinged` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `post_content` longtext COLLATE utf8_general_ci NOT NULL,
+  `post_title` text COLLATE utf8_general_ci NOT NULL,
+  `post_excerpt` text COLLATE utf8_general_ci NOT NULL,
+  `post_status` varchar(20) COLLATE utf8_general_ci NOT NULL DEFAULT 'publish',
+  `comment_status` varchar(20) COLLATE utf8_general_ci NOT NULL DEFAULT 'open',
+  `ping_status` varchar(20) COLLATE utf8_general_ci NOT NULL DEFAULT 'open',
+  `post_password` varchar(255) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `post_name` varchar(200) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `to_ping` text COLLATE utf8_general_ci NOT NULL,
+  `pinged` text COLLATE utf8_general_ci NOT NULL,
   `post_modified` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `post_modified_gmt` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `post_content_filtered` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `post_content_filtered` longtext COLLATE utf8_general_ci NOT NULL,
   `post_parent` bigint(20) unsigned NOT NULL DEFAULT '0',
-  `guid` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `guid` varchar(255) COLLATE utf8_general_ci NOT NULL DEFAULT '',
   `menu_order` int(11) NOT NULL DEFAULT '0',
-  `post_type` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'post',
-  `post_mime_type` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `post_type` varchar(20) COLLATE utf8_general_ci NOT NULL DEFAULT 'post',
+  `post_mime_type` varchar(100) COLLATE utf8_general_ci NOT NULL DEFAULT '',
   `comment_count` bigint(20) NOT NULL DEFAULT '0',
   PRIMARY KEY (`ID`),
   KEY `post_name` (`post_name`(191)),
   KEY `type_status_date` (`post_type`,`post_status`,`post_date`,`ID`),
   KEY `post_parent` (`post_parent`),
   KEY `post_author` (`post_author`)
-) ENGINE=InnoDB AUTO_INCREMENT=377 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=377 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -554,7 +554,7 @@ CREATE TABLE `w324p_term_relationships` (
   `term_order` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`object_id`,`term_taxonomy_id`),
   KEY `term_taxonomy_id` (`term_taxonomy_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -577,14 +577,14 @@ DROP TABLE IF EXISTS `w324p_term_taxonomy`;
 CREATE TABLE `w324p_term_taxonomy` (
   `term_taxonomy_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `term_id` bigint(20) unsigned NOT NULL DEFAULT '0',
-  `taxonomy` varchar(32) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `description` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `taxonomy` varchar(32) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `description` longtext COLLATE utf8_general_ci NOT NULL,
   `parent` bigint(20) unsigned NOT NULL DEFAULT '0',
   `count` bigint(20) NOT NULL DEFAULT '0',
   PRIMARY KEY (`term_taxonomy_id`),
   UNIQUE KEY `term_id_taxonomy` (`term_id`,`taxonomy`),
   KEY `taxonomy` (`taxonomy`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -607,12 +607,12 @@ DROP TABLE IF EXISTS `w324p_termmeta`;
 CREATE TABLE `w324p_termmeta` (
   `meta_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `term_id` bigint(20) unsigned NOT NULL DEFAULT '0',
-  `meta_key` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `meta_value` longtext COLLATE utf8mb4_unicode_ci,
+  `meta_key` varchar(255) COLLATE utf8_general_ci DEFAULT NULL,
+  `meta_value` longtext COLLATE utf8_general_ci,
   PRIMARY KEY (`meta_id`),
   KEY `term_id` (`term_id`),
   KEY `meta_key` (`meta_key`(191))
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -633,13 +633,13 @@ DROP TABLE IF EXISTS `w324p_terms`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `w324p_terms` (
   `term_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `slug` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `name` varchar(200) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `slug` varchar(200) COLLATE utf8_general_ci NOT NULL DEFAULT '',
   `term_group` bigint(10) NOT NULL DEFAULT '0',
   PRIMARY KEY (`term_id`),
   KEY `slug` (`slug`(191)),
   KEY `name` (`name`(191))
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -662,12 +662,12 @@ DROP TABLE IF EXISTS `w324p_usermeta`;
 CREATE TABLE `w324p_usermeta` (
   `umeta_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `user_id` bigint(20) unsigned NOT NULL DEFAULT '0',
-  `meta_key` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `meta_value` longtext COLLATE utf8mb4_unicode_ci,
+  `meta_key` varchar(255) COLLATE utf8_general_ci DEFAULT NULL,
+  `meta_value` longtext COLLATE utf8_general_ci,
   PRIMARY KEY (`umeta_id`),
   KEY `user_id` (`user_id`),
   KEY `meta_key` (`meta_key`(191))
-) ENGINE=InnoDB AUTO_INCREMENT=48 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=48 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -689,20 +689,20 @@ DROP TABLE IF EXISTS `w324p_users`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `w324p_users` (
   `ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `user_login` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `user_pass` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `user_nicename` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `user_email` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `user_url` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `user_login` varchar(60) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `user_pass` varchar(255) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `user_nicename` varchar(50) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `user_email` varchar(100) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `user_url` varchar(100) COLLATE utf8_general_ci NOT NULL DEFAULT '',
   `user_registered` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `user_activation_key` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `user_activation_key` varchar(255) COLLATE utf8_general_ci NOT NULL DEFAULT '',
   `user_status` int(11) NOT NULL DEFAULT '0',
-  `display_name` varchar(250) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `display_name` varchar(250) COLLATE utf8_general_ci NOT NULL DEFAULT '',
   PRIMARY KEY (`ID`),
   KEY `user_login_key` (`user_login`),
   KEY `user_nicename` (`user_nicename`),
   KEY `user_email` (`user_email`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
