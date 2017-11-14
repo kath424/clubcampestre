@@ -1,0 +1,556 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Entrepreneur Shortcodes\n"
+"POT-Creation-Date: 2015-10-13 14:11-0800\n"
+"PO-Revision-Date: 2015-10-13 14:11-0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en_CA\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: entrepreneur-shortcodes.php\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: entrepreneur-shortcodes.php:170
+msgid "Insert shortcode"
+msgstr ""
+
+#: entrepreneur-shortcodes.php:186
+msgid "Select shortcode"
+msgstr ""
+
+#: entrepreneur-shortcodes.php:186
+msgid "Shortcode not found"
+msgstr ""
+
+#: entrepreneur-shortcodes.php:210
+msgid "http://docs.themovation.com/entrepreneur/#shortcodes"
+msgstr ""
+
+#: entrepreneur-shortcodes.php:210
+msgid "Help"
+msgstr ""
+
+#: lib/available.php:11
+msgid "Theme Shortcodes"
+msgstr ""
+
+#: lib/available.php:27
+msgid "Accordion Group"
+msgstr ""
+
+#: lib/available.php:28
+msgid "Multiple Accordions are grouped with this shortcode."
+msgstr ""
+
+#: lib/available.php:43
+msgid "Box Title"
+msgstr ""
+
+#: lib/available.php:45 lib/available.php:301
+msgid ""
+"<strong>Icons:</strong> Use any Glyphicon, Halfling, Social or Filetype. Add "
+"the icon name (e.g.: camera, time, facebook) in the appropriate text field "
+"below. Find the <a href=\"http://glyphicons.com/\" target=\"_blank\">full "
+"list here</a>."
+msgstr ""
+
+#: lib/available.php:49 lib/available.php:305 lib/available.php:365
+#: lib/available.php:679 lib/available.php:1318
+msgid "Glyphicon"
+msgstr ""
+
+#: lib/available.php:54 lib/available.php:310 lib/available.php:370
+#: lib/available.php:684 lib/available.php:1323
+msgid "Halfling"
+msgstr ""
+
+#: lib/available.php:59 lib/available.php:315 lib/available.php:375
+#: lib/available.php:689 lib/available.php:1328
+msgid "Social"
+msgstr ""
+
+#: lib/available.php:64 lib/available.php:320 lib/available.php:380
+#: lib/available.php:694 lib/available.php:1333
+msgid "Filetype"
+msgstr ""
+
+#: lib/available.php:67 lib/available.php:117 lib/available.php:160
+#: lib/available.php:473 lib/available.php:786 lib/available.php:843
+#: lib/available.php:902 lib/available.php:960 lib/available.php:1034
+#: lib/available.php:1082 lib/available.php:1279
+msgid "Content goes here"
+msgstr ""
+
+#: lib/available.php:69
+msgid "Collapsible content areas."
+msgstr ""
+
+#: lib/available.php:70
+msgid ""
+"Multiple Accordions should be grouped with the Accordion Group shortcode "
+"first."
+msgstr ""
+
+#: lib/available.php:87
+msgid "Alert Heading"
+msgstr ""
+
+#: lib/available.php:97
+msgid "Alert Style"
+msgstr ""
+
+#: lib/available.php:105
+msgid "Block Padding"
+msgstr ""
+
+#: lib/available.php:113
+msgid "Close Button"
+msgstr ""
+
+#: lib/available.php:118
+msgid "Alert box with optional padding and close button"
+msgstr ""
+
+#: lib/available.php:134
+msgid "Cite Title"
+msgstr ""
+
+#: lib/available.php:139
+msgid "Cite Name"
+msgstr ""
+
+#: lib/available.php:147
+msgid "Blockquote Alignment"
+msgstr ""
+
+#: lib/available.php:155
+msgid "Reverse Display"
+msgstr ""
+
+#: lib/available.php:161
+msgid "For quoting blocks of content from another source within your document."
+msgstr ""
+
+#: lib/available.php:176 lib/available.php:243 lib/available.php:878
+#: lib/available.php:993 lib/available.php:1198
+msgid "Button Text"
+msgstr ""
+
+#: lib/available.php:181 lib/available.php:248
+msgid "Button Link"
+msgstr ""
+
+#: lib/available.php:190
+msgid "Button Style"
+msgstr ""
+
+#: lib/available.php:199 lib/available.php:282
+msgid "Button Link Target"
+msgstr ""
+
+#: lib/available.php:203
+msgid "Theme Buttons in 3 Styles: Standard, Ghost and Call to Action"
+msgstr ""
+
+#: lib/available.php:222
+msgid "Button Group Justified"
+msgstr ""
+
+#: lib/available.php:227
+msgid "Button Group"
+msgstr ""
+
+#: lib/available.php:228
+msgid "Group multiple buttons with this shortcode."
+msgstr ""
+
+#: lib/available.php:259 lib/available.php:889 lib/available.php:1017
+#: lib/available.php:1222
+msgid "Button Size"
+msgstr ""
+
+#: lib/available.php:273 lib/available.php:873 lib/available.php:1006
+#: lib/available.php:1211
+msgid "Button Style (color)"
+msgstr ""
+
+#: lib/available.php:284
+msgid ""
+"<strong>Dropdowns:</strong> Use the shortcode generator to add dropdown "
+"buttons after you add at least one button."
+msgstr ""
+
+#: lib/available.php:291
+msgid "Is this the top of a button dropdown?"
+msgstr ""
+
+#: lib/available.php:299
+msgid "Button dropdown split style?"
+msgstr ""
+
+#: lib/available.php:325 lib/available.php:385
+msgid "4 sizes, 7 colors and 500+ icons"
+msgstr ""
+
+#: lib/available.php:326
+msgid ""
+"Multiple buttons need to be wrapped in a [button_group][/button_group], "
+"single buttons do not."
+msgstr ""
+
+#: lib/available.php:341
+msgid "Dropdown Link"
+msgstr ""
+
+#: lib/available.php:350
+msgid "Dropdown Target"
+msgstr ""
+
+#: lib/available.php:358
+msgid "Dropdown Divder"
+msgstr ""
+
+#: lib/available.php:361 lib/available.php:675 lib/available.php:1314
+msgid ""
+"<strong>Icons:</strong> Use any Glyphicon, Halfling, Social or Filetype. Add "
+"the icon name (e.g.: camera, time, facebook) in the appropriate text field "
+"below. Find the <a href=\"http://glyphicons.com/\" target=\"_blank\">full "
+"list here</a>"
+msgstr ""
+
+#: lib/available.php:386
+msgid ""
+"Used in conjunction with the Button Shortcode and Button Group Shortcode."
+"<br>This Shortcode requires a Button Shortcode AND a Button Group Shortcode "
+"Wrapper"
+msgstr ""
+
+#: lib/available.php:401
+msgid "Include specific image IDs"
+msgstr ""
+
+#: lib/available.php:406
+msgid "Carousel width e.g. 600"
+msgstr ""
+
+#: lib/available.php:409
+msgid ""
+"Simular to the <a href=\"http://codex.wordpress.org/Gallery_Shortcode\" "
+"target=\"_blank\">WordPress [gallery] shortcode</a>. Takes image IDs and "
+"converts into a carousel gallery."
+msgstr ""
+
+#: lib/available.php:410
+msgid "A Carousel of your gallery's images"
+msgstr ""
+
+#: lib/available.php:428
+msgid "Scroll - for large blocks"
+msgstr ""
+
+#: lib/available.php:436
+msgid "Inline with text"
+msgstr ""
+
+#: lib/available.php:439
+msgid "Code goes here"
+msgstr ""
+
+#: lib/available.php:441
+msgid "Code box for showing code."
+msgstr ""
+
+#: lib/available.php:469
+msgid "Column Span."
+msgstr ""
+
+#: lib/available.php:472
+msgid ""
+"The column shortcode is a grid of up to 12 columns. If you want two equal "
+"columns, create two columns, with a span of 6 each."
+msgstr ""
+
+#: lib/available.php:475
+msgid ""
+"Grid systems are used for creating page layouts through a series of rows and "
+"columns that house your content."
+msgstr ""
+
+#: lib/available.php:489
+msgid "Row"
+msgstr ""
+
+#: lib/available.php:490
+msgid "For each column row, use this row shortcode generator to wrap."
+msgstr ""
+
+#: lib/available.php:509 lib/available.php:673
+msgid "Style"
+msgstr ""
+
+#: lib/available.php:527
+msgid "Title"
+msgstr ""
+
+#: lib/available.php:532
+msgid "Location"
+msgstr ""
+
+#: lib/available.php:537
+msgid "Width"
+msgstr ""
+
+#: lib/available.php:542
+msgid "Height"
+msgstr ""
+
+#: lib/available.php:547
+msgid "Zoom level"
+msgstr ""
+
+#: lib/available.php:557
+msgid "Alignment"
+msgstr ""
+
+#: lib/available.php:562 lib/available.php:593
+msgid "Class"
+msgstr ""
+
+#: lib/available.php:588
+msgid "Color"
+msgstr ""
+
+#: lib/available.php:612
+msgid "Group / wrap a horizontal description list together."
+msgstr ""
+
+#: lib/available.php:627
+msgid "List Title"
+msgstr ""
+
+#: lib/available.php:632
+msgid "Make terms and descriptions line up side-by-side."
+msgstr ""
+
+#: lib/available.php:657 lib/available.php:1312
+msgid "Size"
+msgstr ""
+
+#: lib/available.php:666
+msgid "Wrapper"
+msgstr ""
+
+#: lib/available.php:714
+msgid "Image src"
+msgstr ""
+
+#: lib/available.php:723
+msgid "Image shape"
+msgstr ""
+
+#: lib/available.php:728
+msgid "Image link"
+msgstr ""
+
+#: lib/available.php:737
+msgid "Image link target"
+msgstr ""
+
+#: lib/available.php:742
+msgid "Image class"
+msgstr ""
+
+#: lib/available.php:747
+msgid "Image alt text"
+msgstr ""
+
+#: lib/available.php:752
+msgid "Image width"
+msgstr ""
+
+#: lib/available.php:757
+msgid "Image height"
+msgstr ""
+
+#: lib/available.php:761
+msgid "Apply mages styles: rounded, circle or thumbnail."
+msgstr ""
+
+#: lib/available.php:776
+msgid "Background color"
+msgstr ""
+
+#: lib/available.php:782
+msgid "Text Color"
+msgstr ""
+
+#: lib/available.php:788
+msgid ""
+"A lightweight, flexible component that can optionally extend the entire "
+"viewport to showcase key content on your site."
+msgstr ""
+
+#: lib/available.php:812
+msgid "Label Style (color)"
+msgstr ""
+
+#: lib/available.php:817
+msgid "Label Text"
+msgstr ""
+
+#: lib/available.php:820
+msgid "Text surrounded by a solid color for importance."
+msgstr ""
+
+#: lib/available.php:840
+msgid "text alignment"
+msgstr ""
+
+#: lib/available.php:844 lib/available.php:904
+msgid "Lead Paragraph"
+msgstr ""
+
+#: lib/available.php:859
+msgid "Modal"
+msgstr ""
+
+#: lib/available.php:898
+msgid "Display footer"
+msgstr ""
+
+#: lib/available.php:920
+msgid "Heading Text"
+msgstr ""
+
+#: lib/available.php:925
+msgid "Sub Text"
+msgstr ""
+
+#: lib/available.php:928 lib/available.php:962
+msgid "Page Header."
+msgstr ""
+
+#: lib/available.php:952 lib/available.php:1109
+msgid "Style (color)"
+msgstr ""
+
+#: lib/available.php:957
+msgid "Heading"
+msgstr ""
+
+#: lib/available.php:978 lib/available.php:1050
+msgid "Popover Title"
+msgstr ""
+
+#: lib/available.php:988 lib/available.php:1066 lib/available.php:1193
+msgid "Popover Placement"
+msgstr ""
+
+#: lib/available.php:1022 lib/available.php:1071 lib/available.php:1227
+#: lib/available.php:1268
+msgid "Link Url"
+msgstr ""
+
+#: lib/available.php:1030 lib/available.php:1079 lib/available.php:1235
+#: lib/available.php:1276
+msgid "Link Target"
+msgstr ""
+
+#: lib/available.php:1055
+msgid "Popover Text"
+msgstr ""
+
+#: lib/available.php:1083
+msgid ""
+"The content you enter above will activate the popover text and will be "
+"displayed inline."
+msgstr ""
+
+#: lib/available.php:1098
+msgid "Label"
+msgstr ""
+
+#: lib/available.php:1114
+msgid "Percentage of Progress"
+msgstr ""
+
+#: lib/available.php:1122
+msgid "Striped"
+msgstr ""
+
+#: lib/available.php:1130
+msgid "Animate (requires striped)"
+msgstr ""
+
+#: lib/available.php:1149
+msgid ""
+"Togglable Tabs need to be wrapped in [tabwrap][/tabwrap] tags. Use this "
+"shortcode to output the wrapper tags."
+msgstr ""
+
+#: lib/available.php:1164
+msgid "Tab Label"
+msgstr ""
+
+#: lib/available.php:1167
+msgid "Tab content goes here"
+msgstr ""
+
+#: lib/available.php:1183 lib/available.php:1253
+msgid "Tooltip Text"
+msgstr ""
+
+#: lib/available.php:1263
+msgid "Tooltip Placement"
+msgstr ""
+
+#: lib/available.php:1280
+msgid ""
+"The content you enter above will activate the tooltip text and will be "
+"displayed inline."
+msgstr ""
+
+#: lib/available.php:1296
+msgid "Video src e.g. http://www.youtube.com/embed/iUchUvXA8mk"
+msgstr ""
+
+#: lib/available.php:1301
+msgid "Video lighbox width e.g. 1280"
+msgstr ""
+
+#: lib/generator.php:76 lib/generator.php:78
+msgid "Content"
+msgstr ""
+
+#: lib/generator.php:88
+msgid "Insert"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Entrepreneur Shortcodes"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+#. Author URI of the plugin/theme
+msgid "http://themovation.com"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"This is a plugin for WordPress that adds shortcodes for easier use of the "
+"Bootstrap 3 elements in your content."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Themovation"
+msgstr ""
