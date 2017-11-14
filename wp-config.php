@@ -29,7 +29,7 @@ define('DB_PASSWORD', 'vision');
 
 
 /** Host de MySQL (es muy probable que no necesites cambiarlo) */
-define('DB_HOST', 'localhost');
+define('DB_HOST', '52.204.128.94');
 
 
 /** Codificación de caracteres para la base de datos. */
@@ -85,6 +85,8 @@ $table_prefix  = 'w324p_';
  * en sus entornos de desarrollo.
  */
 define('WP_DEBUG', false);
+define('WP_HOME','http://clubcampestre-clubcampestretrinidad.7e14.starter-us-west-2.openshiftapps.com');
+define('WP_SITEURL','http://clubcampestre-clubcampestretrinidad.7e14.starter-us-west-2.openshiftapps.com');
 
 
 /* ¡Eso es todo, deja de editar! Feliz blogging */
